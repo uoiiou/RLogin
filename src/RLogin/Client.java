@@ -15,8 +15,8 @@ public class Client {
             DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
 
             dataOutputStream.writeUTF("\0");
-            dataOutputStream.writeUTF("uoi" + '\0');
-            dataOutputStream.writeUTF("uoiroot" + '\0');
+            dataOutputStream.writeUTF("name" + '\0');
+            dataOutputStream.writeUTF("nameroot" + '\0');
             dataOutputStream.writeUTF("vt100/9600" + '\0');
 
             System.out.println("From server:\n\tNull byte - " + dataInputStream.readUTF());
@@ -24,8 +24,8 @@ public class Client {
 
             Thread.sleep(5000);
             try {
-                dataOutputStream.writeUTF("uoi1234567890");
-                System.out.println("\t Client wrote - uoi1234567890");
+                dataOutputStream.writeUTF("name1234567890");
+                System.out.println("\t Client wrote - name1234567890");
 
                 System.out.print("\n" + dataInputStream.readUTF() + "\n");
 
