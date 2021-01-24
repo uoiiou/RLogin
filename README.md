@@ -1,2 +1,1 @@
-# RLoginJava
-RLogin
+# RLogin
